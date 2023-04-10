@@ -2,7 +2,6 @@
  * Сервер прослушивает ПОРТ: 2323
  */
 #include "server.h"
-#include "iostream"
 #include "QDataStream"
 
 server::server()
@@ -38,7 +37,16 @@ void server:: slotReadyRead(){
         qDebug() << "read...";
         QString str;
         in >> str;
+        qDebug() << str;
     } else {
         qDebug() << "DataStream error";
     }
+}
+
+void server::SendToClient(QString str){
+    Data.clear();
+    QDataStream out(&Data, QIODevice::WriteOnly);
+    out.setVersion(QDataStream::Qt_5_12);
+    out << str;
+    socket -> write(Data);
 }
