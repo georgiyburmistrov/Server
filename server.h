@@ -13,7 +13,7 @@ public:
     QTcpSocket *socket;
 
 private:
-    QVector <QTcpSocket> Sockets;
+    QVector <QTcpSocket*> Sockets;
     QByteArray Data;
     void SendToClient();
 
