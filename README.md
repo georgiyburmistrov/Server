@@ -1,1 +1,1 @@
-A server-side pet application in C++.
+A server-side personal application in C++.
