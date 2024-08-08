@@ -1,1 +1,1 @@
-The project is a server application executed within the framework of a technical task. Project completion date: April 12, 2023. The project is completed: April 10, 2023. 
+A server-side pet application in C++.
